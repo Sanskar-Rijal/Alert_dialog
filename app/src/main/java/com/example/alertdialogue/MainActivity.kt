@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         btn2.setOnClickListener {
             customDialogFunction()
         }
+        val btn3:Button=findViewById(R.id.button_3)
+        btn3.setOnClickListener {
+            CustomprogressDialog()
+        }
 
     }
     /**
@@ -106,5 +110,15 @@ class MainActivity : AppCompatActivity() {
         }
         customdialog.setCancelable(false)//when tapped on remaining part of the screen it wont cancel out
         customdialog.show()
+    }
+    /**
+     * custom progress dialog
+     */
+    private fun CustomprogressDialog()
+    {
+        val dialog =Dialog(this)
+        dialog.setContentView(R.layout.customdialog_2)
+        //starting the dialog and displaying in the screen
+        dialog.show()
     }
 }
