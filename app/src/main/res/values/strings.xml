@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">alert dialogue</string>
+    <string name="custom_process_dialog">Custom Process dialog</string>
+    <string name="custom_dialog">Custom dialog</string>
+    <string name="alert_dialog">Alert dialog</string>
 </resources>

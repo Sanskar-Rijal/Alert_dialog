@@ -1,9 +1,11 @@
 package com.example.alertdialogue
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
@@ -25,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         val bt1:Button=findViewById(R.id.button_1)
         bt1.setOnClickListener {
             alertDialogfunctino()
+        }
+        val btn2:Button=findViewById(R.id.button_2)
+        btn2.setOnClickListener {
+            customDialogFunction()
         }
 
     }
@@ -78,5 +84,27 @@ class MainActivity : AppCompatActivity() {
          * builder.create()
          * builder.show()
          */
+    }
+    /**
+     * creating custom dialog on our own
+     */
+    private fun customDialogFunction()
+    {
+        val customdialog=Dialog(this) //custom dialog is an object of class Dialog
+        //setcontent view means we are using ui from layout
+        customdialog.setContentView(R.layout.customdialog1)
+        //now customdialog can access all the ids of that xml
+        val submit:TextView=customdialog.findViewById(R.id.tv_submit)
+        submit.setOnClickListener {
+            Toast.makeText(this, "you clicked submit", Toast.LENGTH_SHORT).show()
+            customdialog.dismiss()
+        }
+        val cancel:TextView=customdialog.findViewById(R.id.tv_cancel)
+        cancel.setOnClickListener {
+            Toast.makeText(this,"you pressed cancel",Toast.LENGTH_SHORT).show()
+            customdialog.dismiss()
+        }
+        customdialog.setCancelable(false)//when tapped on remaining part of the screen it wont cancel out
+        customdialog.show()
     }
 }

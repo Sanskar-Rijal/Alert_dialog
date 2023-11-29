@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom dialog title"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="thiis is the custom dialog made by me  how is it?You can press cancel or sumbit bla bla bla add more stuff by yourself bye bye"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="submit"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#FF0000"
+            android:foreground="?attr/selectableItemBackground"
+            />
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:gravity="center"
+            android:foreground="?attr/selectableItemBackground"
+            />
+    </LinearLayout>
+</LinearLayout>
